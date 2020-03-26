@@ -24,7 +24,8 @@ export class CartService {
     return this.items;
   }
 
-  //We use the following to fetch a a json data (simulate rest call)
+   /* We use the following to fetch a a json data (simulate rest call)
+   */
    getShippingPrices() {
     return this.http.get('/assets/shipping.json');
   }
