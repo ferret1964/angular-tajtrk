@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 
 import { CartService } from '../cart.service';
 
@@ -18,6 +19,7 @@ export class CartComponent implements OnInit {
   constructor( 
     private cartService: CartService,
     private formBuilder: FormBuilder, 
+    private router: Router,
     ) { 
           this.checkoutForm = this.formBuilder.group({
       name: '',
@@ -34,6 +36,7 @@ export class CartComponent implements OnInit {
     this.checkoutForm.reset();
 
     console.warn('Your order has been submitted', customerData);
+    this.router.navigate(['/']);
   }
 
 }
