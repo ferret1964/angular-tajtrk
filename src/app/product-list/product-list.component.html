@@ -1,4 +1,4 @@
-<h2>All Products (rev 5)</h2>
+<h2>All Products (rev 6)</h2>
 
 <div *ngFor="let product of products">
 
@@ -16,6 +16,6 @@
     Share
   </button>
   
-  <app-product-alerts [product]="product"></app-product-alerts>
+  <app-product-alerts [product]="product" (notify)="onNotify()"></app-product-alerts>
 
 </div>
